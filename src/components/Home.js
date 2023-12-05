@@ -1,5 +1,6 @@
 import React from 'react';
 import '../stylesheets/home.css';
+import { Link } from 'react-router-dom';
 const Home = () => {
     return (
         <div className="home">
@@ -11,8 +12,8 @@ const Home = () => {
                 Your dreams will come true!
             </h2>
             <div className="routeButtons">
-                <button className='btn m-5'>LogIn</button>
-                <button className='btn m-5'>SignUp</button>
+                <Link to='/login'><button className='btn m-5'>LogIn</button></Link>
+                <Link to='/signup'><button className='btn m-5'>SignUp</button></Link>
             </div>
             <div className="smile"></div>
             

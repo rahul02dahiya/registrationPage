@@ -1,4 +1,4 @@
-.home{
+.greet{
     background-image: url('../mediaFiles/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,7 +12,7 @@
     padding: 2rem;
 }
 
-.home h2{
+.greet h2{
     -webkit-text-stroke: 1px rgba(0, 0, 0, 0.545);
     -webkit-text-fill-color: rgb(255, 255, 255);
 }

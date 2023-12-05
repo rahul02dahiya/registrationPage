@@ -1,7 +1,8 @@
 import './stylesheets/App.css';
-import Home from './components/Home'
+import Greet from './components/Greet'
 import Login from './components/Login';
 import Signup from './components/Signup';
+import Home from './components/Home';
 
 import {
   BrowserRouter as Router,
@@ -15,7 +16,8 @@ function App() {
       <Router>
         <Routes>
 
-          <Route exact path='/' element={<Home />} />
+          <Route exact path='/' element={<Greet />} />
+          <Route exact path='/home' element={<Home />} />
           <Route exact path='/login' element={<Login />} />
           <Route exact path='/signup' element={<Signup />} />
 

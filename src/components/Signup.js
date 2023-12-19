@@ -12,7 +12,6 @@ const Signup = () => {
 
     const handleSubmit = async (e) => {
 
-        // To stop reload \/
         e.preventDefault();
 
         const response = await fetch(`${host}/api/auth/signup`,{

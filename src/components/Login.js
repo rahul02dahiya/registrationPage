@@ -11,7 +11,6 @@ const Login = () => {
    
     const handleSubmit = async (e)=>{
 
-        // To stop reload \/
         e.preventDefault();
 
         const response = await fetch(`${host}/api/auth/login`,{
@@ -27,11 +26,12 @@ const Login = () => {
 
         if(json.authToken){
             // Save auth token and redirect to notes page
-            localStorage.setItem("token",json.authToken);
+            await localStorage.setItem("token",json.authToken);
             navigate("/home");
         }
         else{
             alert(json.errors);
+            // console.log(json)
         }
     }
 
@@ -45,11 +45,12 @@ const Login = () => {
     <form onSubmit={handleSubmit} >
         <h3>Login Here</h3>
         <label htmlFor="Email">Email</label>
-        <input type="email" placeholder="Enter email" id="email" name="email" onChange={onChange}/>
+        <input type="email" placeholder="Enter email" id="email" name="email" value={credentials.email} onChange={onChange}/>
         <label htmlFor="password">Password</label>
-        <input type="password" placeholder="Password" id="password" name="password" onChange={onChange}/>
+        <input type="password" placeholder="Password" id="password" name="password" value={credentials.password} onChange={onChange}/>
 
-        <Link to='/home'><button type="submit">LogIn</button></Link>        <Link to="/signup">Create a account</Link>
+        <button type="submit">LogIn</button>
+        <Link to="/signup">Create a account</Link>
     </form>
 
         </div>

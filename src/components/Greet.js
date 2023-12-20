@@ -5,9 +5,9 @@ const greet = () => {
     return (
         <div className="greet">
             
-            <div className="greeting">
+            <h1>
             Wel0ome to my Web
-            </div>
+            </h1>
             <h2 style={{"color":"#c7c7c7"}}>
                 Your dreams will come true!
             </h2>
@@ -15,7 +15,6 @@ const greet = () => {
                 <Link to='/login'><button className='btn m-5'>LogIn</button></Link>
                 <Link to='/signup'><button className='btn m-5'>SignUp</button></Link>
             </div>
-            <div className="smile"></div>
             
         </div>
     );

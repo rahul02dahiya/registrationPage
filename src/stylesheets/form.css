@@ -5,16 +5,23 @@
   z-index: -1;
 }
 
-#login-form form {
+.login-form {
   height: max-content;
   padding: 45px 32px;
   width: 420px;
 }
 
-#signup form {
+.signup-form {
   height: min-content;
   padding: 20px 32px;
   width: 450px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="login-form"],[class*= "signup-form"] {
+    width: 80vw;
+  }
 }
 
 ._form form {
@@ -37,8 +44,6 @@
   border: none;
 }
 
-
-
 ._form label {
   display: block;
   margin-top: 20px;
@@ -46,7 +51,7 @@
   font-weight: bold;
 }
 
-#login-form input {
+#login input {
   height: 50px;
   margin-top: 8px;
 }
@@ -56,7 +61,7 @@
   margin-top: 2px;
 }
 
-._form input:not(#tc) {
+._form input {
   display: block;
   width: 100%;
   background-color: rgba(50, 45, 45, 0.373);
@@ -84,20 +89,4 @@
 
 ._form button:hover {
   background-color: rgb(242, 226, 178);
-}
-
-#tc-label {
-  font-size: 12px;
-  font-weight: 100;
-  margin-left: 10px;
-  display: inline;
-}
-
-#tc-container {
-  margin: 8px;
-}
-
-#tc {
-  width: 13px;
-  height: 13px;
 }

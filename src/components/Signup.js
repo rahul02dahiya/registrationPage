@@ -42,7 +42,7 @@ const Signup = () => {
         <>
             <div id="signup" className="_form">
 
-                <form onSubmit={handleSubmit} >
+                <form className='signup-form' onSubmit={handleSubmit} >
 
                     <h3>Signup Here</h3>
                     <div>
